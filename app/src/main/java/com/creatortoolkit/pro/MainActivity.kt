@@ -7,7 +7,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        title = "Creator Toolkit Pro"
+        setContentView(R.layout.activity_main)
     }
 }
