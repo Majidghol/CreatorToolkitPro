@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insta Tools Pro</title>
+
+<style>
+body {margin:0;font-family:sans-serif;background:#0f0f0f;color:white;text-align:center;}
+.header {background:#E1306C;padding:18px;font-size:22px;font-weight:bold;}
+.grid {display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:20px;}
+.card {background:#1e1e1e;padding:20px;border-radius:12px;cursor:pointer;}
+.locked {opacity:0.4;}
+</style>
+
+</head>
+<body>
+
+<div class="header">📱 Insta Tools Pro</div>
+
+<div class="grid">
+
+<div class="card" onclick="alert('Download coming soon')">📥 Download</div>
+<div class="card" onclick="alert('Reels coming soon')">🎥 Reels</div>
+
+<div class="card locked" id="vip1" onclick="checkVIP()">
+🔐 VIP Tool
+</div>
+
+<div class="card" onclick="unlock()">🔑 Enter VIP Code</div>
+
+</div>
+
+<script>
+
+let vip = false;
+
+function unlock(){
+    let code = prompt("Enter VIP Code:");
+    if(code === "1234"){
+        vip = true;
+        document.getElementById("vip1").style.opacity = "1";
+        alert("VIP Activated 🔥");
+    } else {
+        alert("Wrong Code");
+    }
+}
+
+function checkVIP(){
+    if(!vip){
+        alert("This is VIP Only 🔒");
+    } else {
+        alert("Welcome VIP User 🚀");
+    }
+}
+
+</script>
+
+</body>
+</html>
